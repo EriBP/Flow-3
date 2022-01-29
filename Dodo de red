@@ -1,0 +1,47 @@
+
+De forma local
+Instrucciones
+	{
+	    "id": "Erika Barojas",
+	    "temp": "18",
+	    "hum": "70"
+	}
+
+	Para juntar instrucciones	
+		{"id": "Erika Barojas", "temp": "18", "hum": "70"}
+
+Para suscribirse
+
+              	mosquitto_sub -h localhost -i Erika-sub -t sic/flow3/temp
+
+Para publicar
+
+		mosquitto_pub -h localhost -p 1883 -i Erika2010 -q 2 -t sic/flow3/temp -m  "hola"
+
+	Varios valores
+	
+	mosquitto_pub -h localhost -p 1883 -i Erika2010 -q 2 -t sic/flow3/temp -m  "{\"id\": \"Erika Barojas\", \"temp\": \"18\", \"hum\": \"70\"}"
+
+
+
+Para que sea en GRUPAL
+ 
+mosquitto_sub -h broker -i Erika1977 -t sic/flow3/temp 
+  
+mosquitto_pub -h broker -p 18.158.198.79 -i Erika2010 -q 2 -t sic/flow3/temp -m  "{\"id\": \"Erika Barojas\", \"temp\": \"16\", \"hum\": \"70\"}"
+
+
+mosquitto_pub -h broker -p 18.158.198.79 -i Erika2010 -q 2 -t sic/flow3/temp -m  "{\"id\": \"Erika Barojas\", \"temp\": \"16\", \"hum\": \"70\"}"
+
+
+
+
+
+
+
+28 enero 2022
+Ejecutar Flow 3
+
+mosquitto_pub -h 35.157.158.119 -p 1883 -i erika1977 -q 2 -t sic/flow3/temp -m "{\"id\": \"Erika Barojas\", \"temp\": \"16\", \"humedad\": \"70\"}" 
+
+
